@@ -1,0 +1,46 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/weather/getweatherforecast",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/weatherforecast",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7180
+        }
+      ]
+
+    },
+    {
+      "UpstreamPathTemplate": "/weather/getforecast",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/weatherforecast",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7042
+        }
+      ]
+
+    },
+    {
+      "UpstreamPathTemplate": "/weather/get",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/weatherforecast",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7261
+        }
+      ]
+
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7021"
+  }
+}

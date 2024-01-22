@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "File Upload";
+}
+
+
+<div class="container-xxl flex-grow-1 container-p-y">
+
+    <h4 class="fw-bold py-3 mb-4">
+        <span class="text-muted fw-light">Uploads /</span> File upload
+    </h4>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <h5 class="card-header">Upload Single</h5>
+                <div class="card-body">
+                    <form asp-action="UploadFile" asp-controller="File" method="post" class="dropzone needsclick" id="dropzone-basic">
+                        <div class="dz-message needsclick">
+                            Drop file here or click to upload
+                            
+                        </div>
+                        <div class="fallback">
+                            <input name="file" type="file" />
+                        </div>
+                        <button type="submit" class="btn btn-primary my-2 float-end" asp-action="UploadFile" asp-controller="File">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card">
+                <h5 class="card-header">Upload Multiple</h5>
+                <div class="card-body">
+                    <form asp-action="UploadFiles" asp-controller="File" method="post" class="dropzone needsclick" id="dropzone-multi" enctype="multipart/form-data">
+                        <div class="dz-message needsclick">
+                            Drop files here or click to upload
+                            
+                        </div>
+                        <div class="fallback">
+                            <input name="files" type="file" multiple />
+                        </div>
+                        <button type="submit" class="btn btn-primary my-2 float-end" asp-action="UploadFiles" asp-controller="File">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 my-2">
+            <div class="card">
+                <h5 class="card-header">Summarize Text</h5>
+                <div class="card-body">
+                    <form asp-action="SummarizeText" asp-controller="File" method="post">
+                        <button type="submit" class="btn btn-secondary my-2 float-end" asp-action="SummarizeText" asp-controller="File">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+   
+    
+
+</div>
