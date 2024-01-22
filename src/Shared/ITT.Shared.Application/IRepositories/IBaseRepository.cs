@@ -19,26 +19,3 @@ namespace ITT.Shared.Application.IRepositories
 
 }
 
-public async Task<List<Language>> BindAllLanguages()
-{
-    return await GetObjectPost<List<Language>>(Endpoints.BindAllLanguages);
-}
-
-public async Task<List<TranslatedContent>> GetTranslations(GetTranslationsRequest getTranslationsRequest)
-{
-    return await PostObjectAsync<List<TranslatedContent>>(Endpoints.GetTranslations, getTranslationsRequest);
-}
-
-
-public async Task<List<EventCategory>> GetAllEventCategories(EventCategoriesRequest eventCategoriesRequest)
-{
-    return await PostObjectAsync<List<EventCategory>>(Endpoints.GetAllEventCategories, eventCategoriesRequest);
-}
-
- public async Task<List<Event>> GetEvents(EventRequest eventRequest)
- {
-     return await PostObjectAsync<List<Event>>(Endpoints.GetEvents, eventRequest);
- }
-
- ActionResult Get(int id);
-IActionResult Manage();
